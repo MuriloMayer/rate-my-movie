@@ -1,8 +1,6 @@
 # Rate My Movie
 
-Aplicativo móvel de exemplo para gerenciar e avaliar filmes (Rate My Movie).
-
-Este repositório contém uma aplicação React Native com Expo e TypeScript.
+Aplicativo para avaliar filmes .
 
 ## Tecnologias
 
@@ -49,12 +47,6 @@ npm run start
 expo start
 ```
 
-- Rodar o TypeScript checker (sem gerar saída):
-
-```bash
-npx tsc --noEmit
-```
-
 - iOS / Android via Expo:
 
 ```bash
@@ -62,55 +54,9 @@ npm run ios
 npm run android
 ```
 
-## Notas sobre tipos e problemas comuns
+## Autores
 
-- Se o VS Code mostrar erro "Cannot find module '@expo/vector-icons'" instale o pacote:
+- [@MuriloMayer](https://www.github.com/murilomayer)
+- [@MatheusKormann](https://www.github.com/octokatherine](https://github.com/matheuskormann))
+- [@LucasBaumer]([https://www.github.com/octokatherine](https://github.com/lucasbaumer))
 
-```bash
-npm install @expo/vector-icons --save
-```
-
-- Se o TypeScript reclamar de tipos quando uma expressão condicional retorna `false | { ... }` (por exemplo em arrays de estilo), adapte para usar ternário ou filtrar valores falsy. Exemplo:
-
-```ts
-// ruim - pode ser `false | ViewStyle`
-style={[styles.base, variant === 'primary' && styles.primary]}
-
-// bom
-style={[styles.base, variant === 'primary' ? styles.primary : undefined]}
-
-// ou filtrar
-style={[styles.base, ...(variant === 'primary' ? [styles.primary] : [])]}
-```
-
-- Se você instalar novas dependências e o TS/Editor continuar com erro, reinicie o servidor TypeScript no VS Code: Command Palette → "TypeScript: Restart TS Server" ou recarregue a janela (Developer: Reload Window).
-
-## Desenvolvimento e estilo
-
-- Utilize as cores definidas em `src/constants/theme.ts` para manter consistência visual.
-- Siga os componentes já criados em `src/components/` quando possível para reaproveitamento.
-
-## Executando checks rápidos
-
-1. Instale dependências
-2. Rode o typechecker
-
-```bash
-npm install
-npx tsc --noEmit
-```
-
-## Contribuição
-
-- Abra uma issue para descrever o que pretende mudar.
-- Crie um branch por feature/bugfix.
-
-## Contato
-
-Autor: Murilo Mayer
-
----
-
-Se quiser, posso também:
-- Implementar a tela `MyMoviesScreen` seguindo o estilo do projeto;
-- Corrigir os dois erros TypeScript que apareceram anteriormente e garantir que `npx tsc --noEmit` fique limpo.
